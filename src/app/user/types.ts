@@ -1,12 +1,10 @@
 export const types = `#graphql
 
 type User {
+    firstName: String!
     id: ID!
-    firstname: String!
-    lastname: String
+    lastName: String
     email: String!
     profileImageURL: String
 }
-
-
 `;
