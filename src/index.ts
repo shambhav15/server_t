@@ -1,5 +1,7 @@
-const express = require("express");
+import * as dotenv from "dotenv";
 const { startApolloServer } = require("./app");
+
+dotenv.config();
 
 async function init() {
   const app = await startApolloServer();
