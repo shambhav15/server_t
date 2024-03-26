@@ -13,6 +13,10 @@ export async function startApolloServer() {
   app.use(Cors());
   app.use(bodyParser.json());
 
+  app.get("/", (req: any, res: any) =>
+    res.status(200).send({ message: "Everything is good" })
+  );
+
   const GraphQlserver = new ApolloServer<graphqlContext>({
     typeDefs: `
     ${User.types}
